@@ -1,5 +1,5 @@
 # Exercise 1
-Suppose that a polynomial function $a_0 + a_1*x + a_2*x^2 + ... + a_n*x^n$. Using list ADT, we would like to improve the computation of this function. The declaration of each element in the List should be as follows:
+Suppose that a polynomial function $a_0 + a_1 * x + a_2 * x^2 + ... + a_n * x^n$ . Using list ADT, we would like to improve the computation of this function. The declaration of each element in the List should be as follows:
 
 - a value stands for a constant of each term $a_i (i = 0, ... ,n)$.
 - a degree indicates the degree of each term.
@@ -176,7 +176,7 @@ f(x) = 5*x^4+3*x^6-4*x^7
 f(2) = -240
 ```
 # Exercise 2
-Assume that a railway train has N railroad cars attached together such as $car_1, car_2, car_3,...,car_N. A train can be considered as a list and each car corresponding to a node in this list.
+Assume that a railway train has N railroad cars attached together such as $car_1, car_2, car_3,...,car_N$. A train can be considered as a list and each car corresponding to a node in this list.
 
 - Each car carries a number of passengers (int type) and has a name (char type). Both variables are user-defined values.
 - If there are any cars that don’t have any passengers, they should be removed from the train
