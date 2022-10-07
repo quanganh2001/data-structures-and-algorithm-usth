@@ -86,7 +86,7 @@ The digit number is: 11
 # Exercise 3
 Write a program in C/C++ to enter a natural number n and verify whether n is sphenic using **Recursion**. Calculate the complexity of the proposed algorithm
 
-Note: A sphenic number is a product of $p*q*r$ where p, q and r are three distinct prime numbers. Example $30 = 2*3*5; 42 = 2*3*7; 66 = 2*3*11$
+Note: A sphenic number is a product of p*q*r where p, q and r are three distinct prime numbers. Example 30 = 2 x 3 x 5; 42 = 2 x 3 x 7; 66 = 2 x 3 x 11
 ```cpp
 // Write a program to enter a natural number n and find all sphenic numbers from 1 to N using Recursion (combined with iteration if necessary)
 
