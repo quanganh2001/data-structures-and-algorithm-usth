@@ -17,6 +17,8 @@ Implement this tree structure in C/C++ with the necessary functions.
 - Write a function to initialize an array with n random values
 - Write a function to build this binary tree with the above definition with any data structure learn in lectures.
 - Write a function to display the tree information
+- Write a function to search an input value using recursion. If found, display all the subtree with the found node as the root of this subtree’ or else return -1.
+- Write a function to insert new nodes into the tree and another one to remove nodes from the tree.
 ```c
 /* A binary tree can be used to sort n elements of an array data. First, create a complete binary tree, a tree with all leaves at one level, whose height h = (lg n) + 1, and store all elements of the array in the first n leaves. In each empty leaf, store an element E greater than any element in the array.*/
 
