@@ -10,6 +10,8 @@
 - Write a function to initialize an array with n random values
 - Write a function to build this binary tree with the above definition with any data structure learn in lectures.
 - Write a function to display the tree information
+- Write a function to search an input value using recursion. If found, display all the subtree with the found node as the root of this subtree’ or else return -1.
+- Write a function to insert new nodes into the tree and another one to remove nodes from the tree.
 */
 #include <stdio.h>
 #include <stdlib.h>
