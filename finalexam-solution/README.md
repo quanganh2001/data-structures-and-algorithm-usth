@@ -54,7 +54,10 @@ int main()
 }
 ```
 
-When I input the number is 84, the output is $84 = 2*2*3*7$
+When I input the number is 84, the output is 
+```txt
+84 = 2*2*3*7
+```
 
 
 # Question 2
@@ -144,4 +147,11 @@ int main()
 }
 ```
 
-When I input the number is 2000, the output is $2000 = 5*2*4*5*2*5$, similarity for the number is 3240, the output is: $3240 = 2*3*3*3*2*3*2*5$
+When I input the number is 2000, the output is 
+```txt
+2000 = 5*2*4*5*2*5
+```
+Similarity for the number is 3240, the output is: 
+```txt
+3240 = 2*3*3*3*2*3*2*5
+```
