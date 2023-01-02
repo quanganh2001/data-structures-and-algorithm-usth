@@ -190,6 +190,92 @@ int main() {
 }
 ```
 That not completely due to 2 errors
+
+Here is ChatGPT Solution
+```cpp
+#include <iostream>
+#include <queue>
+#include <string>
+#include <unordered_map>
+
+// Struct for each customer in the queue
+struct Customer {
+  int id;
+  int num_products;
+  std::string item_name;
+};
+
+// Queue data structure for the customers
+std::queue<Customer> queue;
+
+// Map for the items in stock
+std::unordered_map<std::string, int> items_in_stock;
+
+// Function to add a customer to the queue
+void enqueue(int id, int num_products, std::string item_name) {
+  Customer c = {id, num_products, item_name};
+  queue.push(c);
+}
+
+// Function to remove a customer from the queue (customer has completed the purchase)
+void dequeue() {
+  queue.pop();
+}
+
+// Function to process the customer at the front of the queue
+void process_customer() {
+  if (queue.empty()) {
+    std::cout << "Queue is empty" << std::endl;
+    return;
+  }
+
+  Customer c = queue.front();
+  std::string item_name = c.item_name;
+  int num_products = c.num_products;
+
+  if (items_in_stock[item_name] >= num_products) {
+    items_in_stock[item_name] -= num_products;
+    std::cout << "Customer " << c.id << " has successfully purchased " << num_products << " " << item_name << "s" << std::endl;
+    dequeue();
+  } else {
+    std::cout << "Error: Not enough " << item_name << "s in stock" << std::endl;
+  }
+}
+
+int main() {
+  // Initialize the items in stock
+  items_in_stock["item1"] = 10;
+  items_in_stock["item2"] = 5;
+  items_in_stock["item3"] = 8;
+
+  // Add customers to the queue
+  enqueue(1, 5, "item1");
+  enqueue(2, 2, "item2");
+  enqueue(3, 7, "item3");
+  enqueue(4, 3, "item1");
+  enqueue(5, 1, "item2");
+  enqueue(6, 2, "item3");
+
+  // Process the customers in the queue
+  process_customer(); // Customer 1 has successfully purchased 5 item1s
+  process_customer(); // Customer 2 has successfully purchased 2 item2s
+  process_customer(); // Customer 3 has successfully purchased 7 item3s
+  process_customer(); // Customer 4 has successfully purchased 3 item1s
+  process_customer(); // Customer 5 has successfully purchased 1 item2s
+  process_customer(); // Customer 6 has successfully purchased 2 item3s
+
+  return 0;
+}
+```
+Result:
+```txt
+Customer 1 has successfully purchased 5 item1s
+Customer 2 has successfully purchased 2 item2s
+Customer 3 has successfully purchased 7 item3s
+Customer 4 has successfully purchased 3 item1s
+Customer 5 has successfully purchased 1 item2s
+Error: Not enough item3s in stock
+```
 # Exercise 2
 In this problem, we try to implement the undo/redo mechanism using two stacks. Choose one method to implement to implement a Stack data structure (Array-based Stack or Stack using Linked List) to implement the above problem.
 
